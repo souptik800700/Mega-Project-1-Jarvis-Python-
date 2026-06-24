@@ -1,7 +1,7 @@
 from groq import Groq
 
 client = Groq(
-    api_key="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"
+    api_key="<apna api key dalo>"
 )
 
 chat_completion = client.chat.completions.create(

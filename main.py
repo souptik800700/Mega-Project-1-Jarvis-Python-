@@ -12,7 +12,7 @@ import os
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init() 
-newsapi = "34c2766fa082c93fdf258ef194ab16e9"
+newsapi = "<Apna api laga>"
 
 def speak_old(text):
     engine.say(text)
@@ -39,7 +39,7 @@ def speak(text):
     os.remove("temp.mp3") 
 
 def aiProcess(command):
-    client = Groq(api_key="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",
+    client = Groq(api_key="<Apna Api key dalo>",
     )
 
     completion = client.chat.completions.create(
