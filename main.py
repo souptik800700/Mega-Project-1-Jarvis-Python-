@@ -77,19 +77,19 @@ def processCommand(c):
             
             # Print the headlines
             for article in articles:
-                speak(article['title'])
+                speak_old(article['title'])
 
     else:
         # Let OpenAI handle the request
         output = aiProcess(c)
-        speak(output) 
+        speak_old(output) 
 
 
 
 
 
 if __name__ == "__main__":
-    speak("bhai bolo....")
+    speak_old("Hi Myshelf Alexa A Ai Voice Assistant")
     while True:
         # Listen for the wake word "Jarvis"
         # obtain audio from the microphone
@@ -101,11 +101,11 @@ if __name__ == "__main__":
                 print("Listening...")
                 audio = r.listen(source, timeout=2, phrase_time_limit=1)
             word = r.recognize_google(audio)
-            if(word.lower() == "didi"):
-                speak("Bolo Bhai")
+            if(word.lower() == "Alexa"):
+                speak_old("Alexa Activated....")
                 # Listen for command
                 with sr.Microphone() as source:
-                    print("Bol Sunchi.........")
+                    print("Now Speak.......")
                     audio = r.listen(source)
                     command = r.recognize_google(audio)
 
